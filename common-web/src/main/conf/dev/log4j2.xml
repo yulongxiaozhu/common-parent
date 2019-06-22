@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <!--<RollingFile name="rollingFile" fileName="C:\\logs\\error\\error.log"-->
+                     <!--filePattern="C:\\logs\\error\\error\\error-%d{MM-dd-yyyy}-%i.log.gz">-->
+            <!--<ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>-->
+            <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS z} %-5level %class{36} %L %M - %msg%xEx%n"/>-->
+            <!--<SizeBasedTriggeringPolicy size="2MB"/>-->
+        <!--</RollingFile>-->
+
+        <!--<Async name="AsyncConsole">-->
+            <!--<AppenderRef ref="Console"/>-->
+            <!--<LinkedTransferQueue/>-->
+        <!--</Async>-->
+
+        <!--<Async name="AsyncError">-->
+            <!--<AppenderRef ref="rollingFile"/>-->
+            <!--<LinkedTransferQueue/>-->
+        <!--</Async>-->
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <!--<AppenderRef ref="AsyncError" />-->
+        </Root>
+
+        <logger name="com.zjmlw.solr.dao.mapper" level="TRACE"></logger>
+        <logger name="org.mybatis" level="DEBUG"></logger>
+    </Loggers>
+</Configuration>
