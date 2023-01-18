@@ -20,6 +20,7 @@ public class UserController {
         List<User> userList = userService.getUserList();
         mv.addObject("userList",userList);
         mv.setViewName("index");
+
         return mv;
     }
 }
