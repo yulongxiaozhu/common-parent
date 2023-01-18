@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.zjmlw.solr.dao.mapper.UserMapper">
 
-    <select id="getUserModel" resultType="com.zjmlw.solr.dao.model.UserModel">
-        select *  from user_info
+    <select id="getUserModel" resultType="com.zjmlw.solr.dao.model.User">
+        select *  from user
     </select>
 
 </mapper>

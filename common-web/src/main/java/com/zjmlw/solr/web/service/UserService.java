@@ -1,12 +1,12 @@
 package com.zjmlw.solr.web.service;
 
 
-import com.zjmlw.solr.dao.model.UserModel;
+import com.zjmlw.solr.dao.model.User;
 
 import java.util.List;
 
 public interface UserService {
-    List<UserModel> getUserList();
+    List<User> getUserList();
 
-    UserModel getUser();
+    User getUser();
 }

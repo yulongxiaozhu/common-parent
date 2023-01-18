@@ -1,7 +1,7 @@
 package com.zjmlw.solr.web.service.impl;
 
 import com.zjmlw.solr.dao.mapper.UserMapper;
-import com.zjmlw.solr.dao.model.UserModel;
+import com.zjmlw.solr.dao.model.User;
 import com.zjmlw.solr.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,9 +17,9 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
 
     @Override
-    public List<UserModel> getUserList() {
+    public List<User> getUserList() {
         return userMapper.getUserModel();
     }
 
-    public UserModel getUser(){return null;}
+    public User getUser(){return null;}
 }
